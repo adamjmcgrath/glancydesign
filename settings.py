@@ -21,6 +21,8 @@ INSTALLED_APPS = (
     'autoload',
     'dbindexer',
 
+    'glancy',
+
     # djangoappengine should come last, so it can override a few manage.py commands
     'djangoappengine',
 )
@@ -40,6 +42,11 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
 )
 
+TEMPLATE_LOADERS = (
+  'django.template.loaders.filesystem.Loader',
+  'django.template.loaders.app_directories.Loader',
+  )
+
 # This test runner captures stdout and associates tracebacks with their
 # corresponding output. Helps a lot with print-debugging.
 TEST_RUNNER = 'djangotoolbox.test.CapturingTestSuiteRunner'
@@ -48,3 +55,5 @@ ADMIN_MEDIA_PREFIX = '/media/admin/'
 TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), 'templates'),)
 
 ROOT_URLCONF = 'urls'
+
+DEBUG = True
