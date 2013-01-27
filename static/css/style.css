@@ -82,7 +82,15 @@ h2, h3 {
 }
 
 .home-pic {
+  border: 1px solid #d1e4f4;
+  height: 345px;
   margin-top: 20px;
+  position: relative;
+  width: 460px;
+}
+
+.home-pic img {
+  position: absolute;
 }
 
 .home-pic img {
