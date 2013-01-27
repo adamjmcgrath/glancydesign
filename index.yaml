@@ -36,3 +36,13 @@ indexes:
   properties:
   - name: __key__
     direction: desc
+
+- kind: glancy_portfoliophoto
+  properties:
+  - name: __key__
+    direction: desc
+
+- kind: glancy_supplier
+  properties:
+  - name: __key__
+    direction: desc

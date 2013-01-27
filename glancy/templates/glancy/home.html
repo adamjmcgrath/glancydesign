@@ -2,11 +2,11 @@
 
 {% block content %}
 <h2>Curtain and blind makers from South West London.</h2>
-<div id="home-pic-1" class="home-pic">
+<div id="pic-left" class="home-pic">
   <img src="{{ left.illustration_url }}" class="illustration">
   <img src="{{ left.photo_url }}" class="photo">
 </div>
-<div id="home-pic-2" class="home-pic">
+<div id="pic-right" class="home-pic">
   <img src="{{ right.illustration_url }}" class="illustration">
   <img src="{{ right.photo_url }}" class="photo">
 </div>
@@ -18,9 +18,9 @@
   function fadeToggle(selector) {
       window.setInterval(function() { jQuery(selector).fadeToggle(1000) }, 5000);
   }
-  fadeToggle('#home-pic-1 .photo');
+  fadeToggle('#pic-left .photo');
    window.setTimeout(function() {
-      fadeToggle('#home-pic-2 .photo');
+      fadeToggle('#pic-right .photo');
   }, 2500);
 })(jQuery);
 </script>

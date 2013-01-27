@@ -2,4 +2,9 @@
 
 {% block content %}
     <h2>Suppliers</h2>
+    <ul id="suppliers">
+    {% for supplier in suppliers %}
+      <li><a href="{{ supplier.link }}">{{ supplier.name }}</a></li>
+    {% endfor %}
+    </ul>
 {% endblock %}

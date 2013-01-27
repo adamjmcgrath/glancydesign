@@ -71,6 +71,14 @@ h2, h3 {
   text-transform: uppercase;
 }
 
+#content h2, h3, li, p {
+  margin-bottom: 10px;
+}
+
+#content ul {
+  list-style-position: inside;
+}
+
 #home-page #home-link a,
 #about-page #about-link a,
 #portfolio-page #portfolio-link a,
@@ -97,14 +105,35 @@ h2, h3 {
   display: block;
 }
 
-#home-pic-1 {
+#pic-left {
   float: left;
 }
 
-#home-pic-2 {
+#pic-right {
   float: right;
 }
 
+#portfolio-page #pic-right {
+  width: 460px;
+  height: 460px;
+}
+
+#portfolio-page #pic-right img,
+#portfolio-page #pic-left img {
+  display: block;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+#suppliers {
+  margin: 0 200px;
+}
+
+#suppliers li {
+  list-style: none;
+  float: left;
+  width: 49%;
+}
 
 /* clearfix */
 .clearfix:after {
