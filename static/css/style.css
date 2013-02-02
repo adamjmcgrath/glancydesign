@@ -11,6 +11,10 @@ midblue: #6b97bf;
   padding: 0;
 }
 
+a img {
+  border: 0;
+}
+
 body {
   background: #d1e4f4;
   color: #405a73;
