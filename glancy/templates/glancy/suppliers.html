@@ -1,10 +1,11 @@
 {% extends "glancy/base.tpl" %}
+{% load markup %}
 
 {% block content %}
-    <h2>Suppliers</h2>
+    {{ page.content|markdown }}
     <ul id="suppliers">
     {% for supplier in suppliers %}
-      <li><a href="{{ supplier.link }}">{{ supplier.name }}</a></li>
+      <li><a href="{{ supplier.link }}" target="_blank">{{ supplier.name }}</a></li>
     {% endfor %}
     </ul>
 {% endblock %}

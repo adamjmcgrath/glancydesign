@@ -2,8 +2,13 @@ from django.db import models
 from google.appengine.api import images
 
 class Page(models.Model):
-  content = models.TextField()
+  content = models.TextField(blank=True)
+  subcontent = models.TextField(blank=True)
   title = models.CharField(max_length=200)
+  photo = models.ImageField(upload_to='about', blank=True)
+
+  def photo_url(self):
+    return images.get_serving_url(str(self.photo).split('/')[0])
 
 class HomePic(models.Model):
   position = models.CharField(max_length=5, choices=(('left', 'left'), ('right', 'right')))
@@ -27,3 +32,7 @@ class PortfolioPhoto(models.Model):
   def photo_url(self):
     return images.get_serving_url(str(self.photo).split('/')[0])
 
+class Pricing(models.Model):
+  position = models.IntegerField()
+  description = models.CharField(max_length=200)
+  cost = models.CharField(max_length=200)

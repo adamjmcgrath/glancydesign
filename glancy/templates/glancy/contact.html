@@ -1,5 +1,6 @@
 {% extends "glancy/base.tpl" %}
+{% load markup %}
 
 {% block content %}
-    <h2>Contact</h2>
+  <div id="contact">{{ page.content|markdown }}</div>
 {% endblock %}

@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Glancy Design Description">
     <title>Glancy Design - {{ page.title }}</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cinzel:400,700">
     <link rel="stylesheet" href="/static/css/style.css" />
   </head>
   <body id="{{ page.title|lower }}-page">
@@ -23,8 +24,10 @@
     </div>
     <div id="content" class="clearfix">
       {% block content %}
-          <h2>{{ page.title }}</h2>
-          {{ page.content|markdown }}
+          <div id="main">{{ page.content|markdown }}</div>
+          <div id="side">
+          {% if page.photo %}<img src="{{ page.photo_url }}" alt="">{% endif %}
+          </div>
       {% endblock %}
     </div>
     <div id="footer">© Glancy Design</div>

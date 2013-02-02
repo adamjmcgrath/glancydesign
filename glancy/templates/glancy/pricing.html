@@ -1,5 +1,22 @@
 {% extends "glancy/base.tpl" %}
+{% load markup %}
 
 {% block content %}
-    <h2>Pricing</h2>
+    <div id="main">
+    <table>
+      {% for price in prices %}
+      <tr>
+        <td>{{ price.description }}</td>
+        <td class="cost">{{ price.cost }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <p class="subcontent">{{ page.subcontent }}</p>
+    </div>
+    <div id="side">
+    {% if page.photo %}
+    <img src="{{ page.photo_url }}=s440" alt="">
+    {% endif %}
+    {{ page.content|markdown }}
+    </div>
 {% endblock %}

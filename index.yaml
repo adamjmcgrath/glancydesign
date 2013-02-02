@@ -42,6 +42,11 @@ indexes:
   - name: __key__
     direction: desc
 
+- kind: glancy_pricing
+  properties:
+  - name: __key__
+    direction: desc
+
 - kind: glancy_supplier
   properties:
   - name: __key__

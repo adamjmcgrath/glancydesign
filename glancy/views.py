@@ -20,7 +20,10 @@ def portfolio(request):
   })
 
 def pricing(request):
-  return render_to_response('glancy/pricing.html', {'page': Page.objects.get(title='Pricing')})
+  return render_to_response('glancy/pricing.html', {
+    'page': Page.objects.get(title='Pricing'),
+    'prices': Pricing.objects.all().order_by('position'),
+  })
 
 def suppliers(request):
   return render_to_response('glancy/suppliers.html', {

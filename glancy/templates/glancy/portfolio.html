@@ -1,22 +1,22 @@
 {% extends "glancy/base.tpl" %}
 
 {% block content %}
-  <h2>Portfolio</h2>
   <div id="pic-left">
     {% for photo in photos %}
-      <a href="#" rel="{{ photo.photo_url }}=s460" class="thumb-link">
-        <img src="{{ photo.photo_url }}=s100-c" border="0" width="100" height="80">
+      <a href="#" rel="{{ photo.photo_url }}=s460" class="thumb-link{% if forloop.first %} active{% endif %}">
+        <img src="{{ photo.photo_url }}=s100-c" width="100" height="80">
       </a>
     {% endfor %}
   </div>
-  <div id="pic-right">{{ photos|first }}</div>
+  <div id="pic-right"><img src="{{ photos.0.photo_url }}=s460"></div>
 {% endblock %}
 
 {% block script %}
 <script>
   $(function() {
     $('.thumb-link').click(function() {
-      var image = $(this).attr('rel');
+      $('.thumb-link').removeClass('active');
+      var image = $(this).addClass('active').attr('rel');
       $('#pic-right').hide()
         .fadeIn('slow')
         .html('<img src="' + image + '"/>');

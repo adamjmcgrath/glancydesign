@@ -14,12 +14,18 @@ midblue: #6b97bf;
 body {
   background: #d1e4f4;
   color: #405a73;
-  font: Georgia, sans-serif;
+  font-family: Georgia, sans-serif;
 }
 
-h2, h3 {
+h1, h2, h3, h4 {
+  font-family: 'Cinzel', Georgia, sans-serif;
   font-weight: normal;
 }
+
+h2, h3, p {
+  margin-bottom: 10px;
+}
+
 
 #home-page h2 {
   text-align: center;
@@ -48,6 +54,7 @@ h2, h3 {
 
 #nav {
   background: #626b73;
+  font-family: 'Cinzel', Georgia, sans-serif;
   height: 38px;
   padding: 4px 0;
   text-align: center;
@@ -56,6 +63,7 @@ h2, h3 {
 #nav ul {
   border: 1px dashed #fff;
   border-width: 1px 0;
+  min-width: 980px;
 }
 
 #nav li {
@@ -64,19 +72,47 @@ h2, h3 {
 
 #nav li a {
   color: #d1e4f4;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 36px;
   padding: 0 20px;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-#content h2, h3, li, p {
-  margin-bottom: 10px;
+#content {
+  line-height: 1.5;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+#content p {
+  font-size: 16px;
+}
+
+#content p.subcontent {
+  font-size: 13px;
+  margin-top: 20px;
 }
 
 #content ul {
   list-style-position: inside;
+}
+
+#content h3 {
+  margin-top: 30px;
+}
+
+#content table {
+  border-collapse: collapse;
+}
+
+#content td {
+  border: 1px solid #ccc;
+  padding: 2px 5px;
+}
+
+#content td.cost {
+  width: 150px;
 }
 
 #home-page #home-link a,
@@ -89,10 +125,26 @@ h2, h3 {
   color: #87bff2;
 }
 
+#main {
+  float: left;
+  width: 63%;
+}
+
+#side {
+  float: right;
+  width: 33%;
+}
+
+#pricing-page #main { width: 47% }
+#pricing-page #side { width: 47% }
+
+#pricing-page #side img {
+  border: 1px solid #ccc;
+}
+
 .home-pic {
   border: 1px solid #d1e4f4;
   height: 345px;
-  margin-top: 20px;
   position: relative;
   width: 460px;
 }
@@ -107,6 +159,10 @@ h2, h3 {
 
 #pic-left {
   float: left;
+}
+
+#portfolio-page #pic-left {
+  width: 50%;
 }
 
 #pic-right {
@@ -125,14 +181,48 @@ h2, h3 {
   margin: 0 10px 10px 0;
 }
 
+#portfolio-page #content img {
+  border: 1px solid #ccc;
+}
+
+.active img {
+  -webkit-box-shadow: 2px 2px 10px rgba(50, 50, 50, 0.8);
+  -moz-box-shadow: 2px 2px 10px rgba(50, 50, 50, 0.8);
+  box-shadow: 2px 2px 10px rgba(50, 50, 50, 0.8);
+}
+
 #suppliers {
-  margin: 0 200px;
+  margin: 30px 200px;
 }
 
 #suppliers li {
   list-style: none;
   float: left;
+  font-size: 18px;
+  margin-bottom: 10px;
   width: 49%;
+}
+
+#suppliers a {
+  font-family: 'Cinzel', Georgia, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#content a {
+  color: #405a73;
+}
+
+#content a:hover {
+  color: #6b97bf;
+}
+
+#contact {
+  margin: 0 150px;
+}
+
+#contact p {
+  font-size: 18px;
 }
 
 /* clearfix */
