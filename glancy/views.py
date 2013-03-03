@@ -28,7 +28,7 @@ def pricing(request):
 def suppliers(request):
   return render_to_response('glancy/suppliers.html', {
     'page': Page.objects.get(title='Suppliers'),
-    'suppliers': Supplier.objects.all(),
+    'suppliers': Supplier.objects.all().order_by('name'),
   })
 
 def contact(request):

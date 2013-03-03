@@ -30,7 +30,7 @@
           </div>
       {% endblock %}
     </div>
-    <div id="footer">© Glancy Design</div>
+    <div id="footer">© Glancy Design <span>{% now "Y" %}</span></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     {% block script %}{% endblock %}
     <script type="text/javascript">

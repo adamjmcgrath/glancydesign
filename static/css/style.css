@@ -50,6 +50,10 @@ h2, h3, p {
   width: 980px;
 }
 
+#footer span {
+  font-size: 13px;
+}
+
 #header {
   height: 150px;
   margin-top: 20px;
@@ -147,7 +151,6 @@ h2, h3, p {
 }
 
 .home-pic {
-  border: 1px solid #d1e4f4;
   height: 345px;
   position: relative;
   width: 460px;
@@ -167,6 +170,8 @@ h2, h3, p {
 
 #portfolio-page #pic-left {
   width: 50%;
+  height: 365px;
+  overflow: auto;
 }
 
 #pic-right {

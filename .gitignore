@@ -1,3 +1,6 @@
-.*.pyc
-.idea
-.gaedata
+.*pyc
+.*sql3
+.idea/
+.gaedata/
+.DS_Store
+bulkloader-log*
