@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="Glancy Design Description">
+    <meta name="description" content="Curtains and Soft Furnishings South West London">
     <title>Glancy Design - {{ page.title }}</title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cinzel:400,700">
     <link rel="stylesheet" href="/static/css/style.css" />
